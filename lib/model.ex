@@ -11,7 +11,7 @@ defmodule ExAirtable.Phoenix.Model do
 
   @callback validate(map()) :: {:ok, map()} | {:error, Ecto.Changeset.t()}
 
-  defmacro __using__(_opts \\ nil) do
+  defmacro __using__(opts \\ nil) do
     quote do
       use ExAirtable.Table
       use Ecto.Schema
@@ -22,5 +22,16 @@ defmodule ExAirtable.Phoenix.Model do
       @primary_key false
     end
 
+    with app <- Keyword.get(opts, :otp_app) do
+      quote bind_quoted: [app: app] do
+        @impl ExAirtable.Table
+        def base do
+          struct(
+            ExAirtable.Config.Base,
+            Application.get_env(unquote(app), ExAirtable.Phoenix)
+          )
+        end
+      end
+    end
   end
 end
