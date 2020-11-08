@@ -22,17 +22,16 @@ defmodule ExAirtable.Phoenix.Model do
       @primary_key false
     end
 
-    case Keyword.get(opts, :otp_app) do
-      app when not is_nil(app) ->
-        quote do
-          @impl ExAirtable.Table
-          def base do
-            struct(
-              ExAirtable.Config.Base,
-              Application.get_env(app, ExAirtable.Phoenix)
-            )
-          end
+    if app = Keyword.get(opts, :otp_app) do
+      quote do
+        @impl ExAirtable.Table
+        def base do
+          struct(
+            ExAirtable.Config.Base,
+            Application.get_env(unquote(app), ExAirtable.Phoenix)
+          )
         end
+      end
     end
   end
 end
