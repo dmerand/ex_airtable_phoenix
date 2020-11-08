@@ -39,7 +39,8 @@ defmodule ExAirtable.Phoenix.MixProject do
 
   def docs do
     [
-      main: "README.md"
+      extras: ["README.md"],
+      main: "readme"
     ]
   end
 

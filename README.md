@@ -138,6 +138,4 @@ If you prefer to use the latest build, point straight to github:
 
 ## Documentation
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ex_airtable_phoenix](https://hexdocs.pm/ex_airtable_phoenix).
+More documentation can be found at [https://hexdocs.pm/ex_airtable_phoenix](https://hexdocs.pm/ex_airtable_phoenix).
