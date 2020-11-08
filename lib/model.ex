@@ -11,7 +11,7 @@ defmodule ExAirtable.Phoenix.Model do
 
   @callback validate(map()) :: {:ok, map()} | {:error, Ecto.Changeset.t()}
 
-  defmacro __using__(opts) do
+  defmacro __using__(opts \\ nil) do
     quote do
       use ExAirtable.Table
       use Ecto.Schema
