@@ -2,6 +2,8 @@
 
 A set of sensible defaults for using [ExAirtable](https://github.com/exploration/ex_airtable) with Phoenix, using Ecto's embedded schemas for validation.
 
+The overall goal is to make working with ExAirtable in Phoenix projects similar enough to working with Ecto to provide a migration pathway should your app outgrow Airtable as a back-end. At the same time, many (most?) apps will never come close to outgrowing Airtable, so you might as well have a nice time using it :)
+
 Because `ExAirtable` returns general-purpose structs that conform to the Airtable API specifications, it's often nice to be able to further validate those structs to domain-specific models. For example, `ExAirtable` might return something like this for your "blogging" app:
 
 ```elixir
