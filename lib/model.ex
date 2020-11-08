@@ -23,7 +23,7 @@ defmodule ExAirtable.Phoenix.Model do
     end
 
     if app = Keyword.get(opts, :otp_app) do
-      quote do
+      quote bind_quoted: [app: app] do
         @impl ExAirtable.Table
         def base do
           struct(
