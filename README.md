@@ -34,7 +34,15 @@ Continuing the above "blogging" app example, you might have a model defined like
 
 ```elixir
 defmodule MyApp.User do
-  use ExAirtable.Phoenix.Model, otp_app: MyApp
+  use ExAirtable.Phoenix.Model
+  
+  # Details about your Base
+  def base do
+    %ExAirtable.Config.Base{
+      api_key: "your key",
+      id: "your base ID"
+    }
+  end
 
   # This would be the name of the table in your Airtable base
   @impl ExAirtable.Table
@@ -125,10 +133,6 @@ If you prefer to use the latest build, point straight to github:
     {:ex_airtable_phoenix, git: "https://github.com/exploration/ex_airtable_phoenix.git"}
   ]
 ```
-
-## Usage
-
-
 
 ## Documentation
 
