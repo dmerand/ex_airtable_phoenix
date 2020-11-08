@@ -113,7 +113,7 @@ defmodule MyApp.UserContext do
 end
 ```
 
-Be sure to check out `ExAirtable.Phoenix.Repo` for more details and examples.
+Be sure to check out `ExAirtable.Phoenix.Repo` for more details and examples. Also, make sure to look at the `ExAirtable` docs themselves for more information about how you configure `ExAirtable` for your app.
 
 ## Installation
 
