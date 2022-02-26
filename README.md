@@ -1,6 +1,6 @@
 # ExAirtablePhoenix
 
-A set of sensible defaults for using [ExAirtable](https://github.com/exploration/ex_airtable) with Phoenix, using Ecto's embedded schemas for validation.
+A set of sensible defaults for using [ExAirtable](https://github.com/dmerand/ex_airtable) with Phoenix, using Ecto's embedded schemas for validation.
 
 The overall goal is to make working with ExAirtable in Phoenix projects similar enough to working with Ecto to provide a migration pathway should your app outgrow Airtable as a back-end. At the same time, many (most?) apps will never come close to outgrowing Airtable, so you might as well have a nice time using it :)
 
@@ -132,7 +132,7 @@ If you prefer to use the latest build, point straight to github:
 
 ```elixir
   [
-    {:ex_airtable_phoenix, git: "https://github.com/exploration/ex_airtable_phoenix.git"}
+    {:ex_airtable_phoenix, git: "https://github.com/dmerand/ex_airtable_phoenix.git"}
   ]
 ```
 
