@@ -9,7 +9,7 @@ defmodule ExAirtable.Phoenix.MixProject do
       docs: docs(),
       elixir: "~> 1.11",
       package: package(),
-      source_url: "https://github.com/exploration/ex_airtable_phoenix",
+      source_url: "https://github.com/dmerand/ex_airtable_phoenix",
       start_permanent: Mix.env() == :prod,
       version: "0.1.0"
     ]
@@ -47,7 +47,7 @@ defmodule ExAirtable.Phoenix.MixProject do
   defp package do
     [
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/exploration/ex_airtable_phoenix"}
+      links: %{"GitHub" => "https://github.com/dmerand/ex_airtable_phoenix"}
     ]
   end
 end
